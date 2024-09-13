@@ -1,4 +1,4 @@
 #!/bin/bash
 
 # Install my_configs.vim
-cp my_configs.vim ${HOME}/.vim_runtime/
+cp my_configs.vim ~/.vim_runtime/
