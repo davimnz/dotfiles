@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Include .bash_customizations in .bashrc
+# include .bash_customizations in .bashrc
 cp .bash_customizations ~/
 cp ~/.bashrc ~/.bashrc.bak
 cat << EOL >> ~/.bashrc

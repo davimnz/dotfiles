@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Restore to default settings on Ubuntu-based systems
+# restore to default settings on Ubuntu
 cp ~/.bashrc ~/.bashrc.bak
 cp /etc/skel/.bashrc ~/
 source ~/.bashrc
