@@ -1,0 +1,12 @@
+vim.g.mapleader        = " "     -- leader key
+vim.g.maplocalleader   = "\\"    -- local leader key
+vim.opt.number         = true    -- line numbers
+vim.opt.relativenumber = false   -- relative line numbers
+vim.opt.hlsearch       = true    -- highlight search
+vim.opt.tabstop        = 2       -- number of spaces that tab counts for
+vim.opt.shiftwidth     = 2       -- number of spaces to use for autoindent
+vim.opt.expandtab      = true    -- spaces instead of tabs
+vim.opt.smartindent    = true    -- smart indenting on new lines
+vim.opt.wrap           = false   -- line wrap
+vim.opt.syntax         = "on"    -- syntax highlighting
+vim.opt.encoding       = "utf-8" -- character encoding
