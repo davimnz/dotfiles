@@ -15,12 +15,12 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Custom options load
+-- Custom options load (vim.g, vim.opt, etc)
 -- Must be done before lazy.nvim setup
 require("editor")
 
 -- Setup with lazy.nvim
-require("lazy").setup("theme")
+require("lazy").setup("plugins")
 
 -- Set default configuration
 vim.cmd("colorscheme gruvbox")
