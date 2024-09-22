@@ -1,3 +1,5 @@
+vim.g.mapleader        = " "     -- Leader key
+vim.g.maplocalleader   = "\\"    -- Local leader key
 vim.opt.number         = true    -- Line numbers
 vim.opt.relativenumber = false   -- Relative line numbers
 vim.opt.hlsearch       = true    -- Highlight search
