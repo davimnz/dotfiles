@@ -24,4 +24,7 @@ require("remap")
 require("lazy").setup("plugins")
 
 -- set default configuration
-vim.cmd("colorscheme gruvbox")
+  -- colorscheme
+    -- gruvbox
+    -- doom-one
+vim.cmd("colorscheme doom-one")
