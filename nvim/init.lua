@@ -17,7 +17,7 @@ vim.opt.rtp:prepend(lazypath)
 
 -- custom options load (vim.g, vim.opt, etc)
 -- must be done before lazy.nvim setup
-require("editor")
+require("opt")
 require("remap")
 
 -- setup with lazy.nvim
