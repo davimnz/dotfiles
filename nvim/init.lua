@@ -1,4 +1,4 @@
--- Install lazy.nvim
+-- install lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
   local lazyrepo = "https://github.com/folke/lazy.nvim.git"
@@ -15,12 +15,13 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Custom options load (vim.g, vim.opt, etc)
--- Must be done before lazy.nvim setup
+-- custom options load (vim.g, vim.opt, etc)
+-- must be done before lazy.nvim setup
 require("editor")
+require("remap")
 
--- Setup with lazy.nvim
+-- setup with lazy.nvim
 require("lazy").setup("plugins")
 
--- Set default configuration
+-- set default configuration
 vim.cmd("colorscheme gruvbox")
