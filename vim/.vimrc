@@ -55,3 +55,17 @@ if executable('clangd')
 endif
 
 let g:lsp_diagnostics_enabled = 0
+
+" Autocompletion
+augroup asyncomplete_setup
+  autocmd!
+  autocmd FileType * if exists('*asyncomplete#enable_for_buffer') && !isdirectory(expand('%'))
+        \ | call asyncomplete#enable_for_buffer()
+        \ | endif
+augroup END
+
+set completeopt=menuone,noinsert,noselect
+
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
