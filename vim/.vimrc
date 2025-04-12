@@ -3,11 +3,11 @@ set nocompatible
 filetype plugin indent on
 syntax on
 set number
-set relativenumber
 set tabstop=4
-set shiftwidth=4 set expandtab
+set shiftwidth=4
+set expandtab
 set smartindent
-set mouse=a
+set mouse=
 set clipboard=unnamedplus
 set cursorline
 set wildmenu
@@ -34,4 +34,14 @@ colorscheme molokai
 
 " Tags
 set tags=./tags;
+
+" NERDTree
+nnoremap <C-n>c :NERDTreeClose<CR>
+nnoremap <C-n>f :NERDTreeFind<CR>
+
+" CtrlP
+let g:ctrlp_user_command = 'find %s -type f'
+let g:ctrlp_root_markers = ['.gitignore']
+let g:ctrlp_map          = '<C-p>'
+let g:ctrlp_cmd          = 'CtrlP'
 
