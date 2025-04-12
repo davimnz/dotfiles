@@ -7,6 +7,7 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set smartindent
+set noshowmode
 set mouse=
 set clipboard=unnamedplus
 set cursorline
@@ -68,4 +69,7 @@ set completeopt=menuone,noinsert,noselect
 
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+" Lightline
+set laststatus=2
 
