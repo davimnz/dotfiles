@@ -45,3 +45,13 @@ let g:ctrlp_root_markers = ['.gitignore']
 let g:ctrlp_map          = '<C-p>'
 let g:ctrlp_cmd          = 'CtrlP'
 
+" LSP
+if executable('clangd')
+  au User lsp_setup call lsp#register_server({
+    \ 'name': 'clangd',
+    \ 'cmd': {server_info->['clangd']},
+    \ 'allowlist': ['c'],
+    \ })
+endif
+
+let g:lsp_diagnostics_enabled = 0
