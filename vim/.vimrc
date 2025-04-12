@@ -21,6 +21,8 @@ nnoremap <Up>    <Nop>
 nnoremap <Down>  <Nop>
 nnoremap <Left>  <Nop>
 nnoremap <Right> <Nop>
+nnoremap w W
+nnoremap b B
 
 inoremap <Up>    <Nop>
 inoremap <Down>  <Nop>
