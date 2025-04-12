@@ -5,12 +5,15 @@ echo "Downloading packages..."
 sudo apt update -y -qq
 sudo apt install -y -qq clangd jq
 
-PLUGINSPATH=$HOME/.vim/pack/plugins/start
+VIMROOT=$HOME/.vim
+PLUGINSPATH=$VIMROOT/pack/plugins/start
+mkdir -p $VIMROOT
 mkdir -p $PLUGINSPATH
+mkdir -p $COLORSPATH
 
 pluginslist=$(jq -c '.[]' config.json)
 
-cd /tmp
+pushd /tmp
 for row in $pluginslist; do
   plugin=$(echo "$row" | jq -r '.plugin')
   tag=$(echo "$row" | jq -r '.tag')
@@ -28,5 +31,13 @@ for row in $pluginslist; do
   mv $foldername $PLUGINSPATH/$plugin
   rm -rf ${pluginzip}
 done
-echo "Installation completed"
+popd
+
+echo "Installing colors..."
+cp -r colors $VIMROOT
+
+echo "Installing .vimrc..."
+cp .vimrc ~/.vimrc
+
+echo "Done"
 
