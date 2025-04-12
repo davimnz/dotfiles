@@ -13,6 +13,9 @@ set clipboard=unnamedplus
 set cursorline
 set wildmenu
 
+" Search subdirectories
+set path+=**
+
 " Mappings
 nnoremap <Up>    <Nop>
 nnoremap <Down>  <Nop>
