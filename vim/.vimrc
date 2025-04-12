@@ -44,7 +44,7 @@ nnoremap <C-n>c :NERDTreeClose<CR>
 nnoremap <C-n>f :NERDTreeFind<CR>
 
 " CtrlP
-let g:ctrlp_user_command = 'find %s -type f'
+let g:ctrlp_user_command = 'find %s -type f -not -path "*/build/*"'
 let g:ctrlp_root_markers = ['.gitignore']
 let g:ctrlp_map          = '<C-p>'
 let g:ctrlp_cmd          = 'CtrlP'
