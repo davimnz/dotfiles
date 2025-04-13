@@ -13,6 +13,7 @@ set clipboard=unnamedplus
 set cursorline
 set wildmenu
 
+
 " Search subdirectories
 set path+=**
 
@@ -23,6 +24,8 @@ nnoremap <Left>  <Nop>
 nnoremap <Right> <Nop>
 nnoremap w W
 nnoremap b B
+nnoremap <leader>c :cclose<CR>
+nnoremap <leader>o :copen<CR>
 
 inoremap <Up>    <Nop>
 inoremap <Down>  <Nop>
@@ -50,6 +53,20 @@ let g:ctrlp_user_command = 'find %s -type f -not -path "*/build/*"'
 let g:ctrlp_root_markers = ['.gitignore']
 let g:ctrlp_map          = '<C-p>'
 let g:ctrlp_cmd          = 'CtrlP'
+
+" Ripgrep
+function! SearchPrompt()
+  let l:query = input("Search: ")
+  if !empty(l:query)
+    execute "Rg --vimgrep " . shellescape(l:query)
+  else
+    execute 'redraw!'
+  endif
+endfunction
+
+nnoremap <C-s> :call SearchPrompt()<CR>
+
+highlight QuickFixLine cterm=NONE
 
 " LSP
 if executable('clangd')

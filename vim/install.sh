@@ -3,9 +3,10 @@
 echo "Downloading packages..."
 
 sudo apt update -y -qq
-sudo apt install -y -qq clangd jq
+sudo apt install -y -qq clangd jq ripgrep
 
 VIMROOT=$HOME/.vim
+COLORSPATH=$VIMROOT/colors
 PLUGINSPATH=$VIMROOT/pack/plugins/start
 mkdir -p $VIMROOT
 mkdir -p $PLUGINSPATH

@@ -4,5 +4,6 @@
     { "plugin": "lsp", "tag": "v0.1.4", "url": "https://github.com/prabirshrestha/vim-lsp/archive/refs/tags" },
     { "plugin": "asyncomplete", "tag": "v2.1.0", "url": "https://github.com/prabirshrestha/asyncomplete.vim/archive/refs/tags" },
     { "plugin": "asyncompletelsp", "tag": "cc5247bc268fb2c79d8b127bd772514554efb3ee", "url": "https://github.com/prabirshrestha/asyncomplete-lsp.vim/archive" },
-    { "plugin": "lightline", "tag": "e358557e1a9f9fc860416c8eb2e34c0404078155", "url": "https://github.com/itchyny/lightline.vim/archive" }
+    { "plugin": "lightline", "tag": "e358557e1a9f9fc860416c8eb2e34c0404078155", "url": "https://github.com/itchyny/lightline.vim/archive" },
+    { "plugin": "vimripgrep", "tag": "v1.0.3", "url": "https://github.com/jremmen/vim-ripgrep/archive/refs/tags" }
 ]
