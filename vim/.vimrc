@@ -26,6 +26,7 @@ nnoremap w W
 nnoremap b B
 nnoremap <leader>c :cclose<CR>
 nnoremap <leader>o :copen<CR>
+nnoremap <leader>w :w!<CR>
 
 inoremap <Up>    <Nop>
 inoremap <Down>  <Nop>
