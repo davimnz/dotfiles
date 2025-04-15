@@ -12,7 +12,7 @@ set mouse=
 set clipboard=unnamedplus
 set cursorline
 set wildmenu
-
+set noswapfile
 
 " Search subdirectories
 set path+=**
@@ -31,6 +31,7 @@ inoremap <Up>    <Nop>
 inoremap <Down>  <Nop>
 inoremap <Left>  <Nop>
 inoremap <Right> <Nop>
+inoremap jk      <Esc>
 
 vnoremap <Up>    <Nop>
 vnoremap <Down>  <Nop>
