@@ -46,6 +46,20 @@ colorscheme molokai
 " Tags
 set tags=./tags;
 
+" Autoformat on save using clang-format
+if executable('clang-format')
+  autocmd BufWritePre *.c,*.h call s:clang_format_preserve_cursor()
+endif
+
+function! s:clang_format_preserve_cursor()
+  " Save current view
+  let l:view = winsaveview()
+  " Format
+  silent! %!clang-format
+  " Restore view
+  call winrestview(l:view)
+endfunction
+
 " NERDTree
 nnoremap <C-n>c :NERDTreeClose<CR>
 nnoremap <C-n>f :NERDTreeFind<CR>
