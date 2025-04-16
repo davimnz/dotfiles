@@ -46,16 +46,19 @@ colorscheme molokai
 " Tags
 set tags=./tags;
 
+" Remove trailing whitespaces on all files
+autocmd BufWritePre * :%s/\s\+$//e
+
 " Autoformat on save using clang-format
 if executable('clang-format')
-  autocmd BufWritePre *.c,*.h call s:clang_format_preserve_cursor()
+  autocmd BufWritePost *.c,*.h call s:clang_format_preserve_cursor() | edit!
 endif
 
 function! s:clang_format_preserve_cursor()
   " Save current view
   let l:view = winsaveview()
   " Format
-  silent! %!clang-format
+  silent! !clang-format -i %
   " Restore view
   call winrestview(l:view)
 endfunction
