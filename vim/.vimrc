@@ -74,9 +74,7 @@ let g:ctrlp_map          = '<C-p>'
 let g:ctrlp_cmd          = 'CtrlP'
 
 " Ripgrep
-nnoremap <C-s> :call s:search_prompt()<CR>
-
-function! s:search_prompt()
+function! SearchPrompt()
   let l:query = input("Search: ")
   if !empty(l:query)
     execute "Rg --vimgrep " . shellescape(l:query)
@@ -84,6 +82,8 @@ function! s:search_prompt()
     execute 'redraw!'
   endif
 endfunction
+
+nnoremap <C-s> :call SearchPrompt()<CR>
 
 highlight QuickFixLine cterm=NONE
 
